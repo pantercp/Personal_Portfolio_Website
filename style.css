@@ -100,7 +100,8 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 .about-col-1 img{
-    width: 100%;
+    width: 95%;
+    margin: auto;
     border-radius: 15px;
 }
 .about-col-2{
@@ -372,7 +373,7 @@ nav ul .fa-solid{
     #header{
     }
     .header-text{
-        background-image: url(images/compressed/phone-background.jpg);
+        background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);
         font-size: 0.8em;
     }
     .about-col-1, .about-col-2{
