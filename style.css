@@ -16,7 +16,6 @@ body {
     padding: 10px 10px;
     background-color: #080808;
 }
-
 nav {
     display: flex;
     height: 8vh;
@@ -24,7 +23,6 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .logo {
     width: 70px;
 }
@@ -32,34 +30,105 @@ nav {
     width: 150px;
 }
 
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
+/* -------------Burger------------ */
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+.row-burger{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
 }
-
-nav ul li a::after{
-    content: '';
-    width: 0;
+.burger-icon {
+    width: 40px;
     height: 3px;
     background: #69D1C5;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
     position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    width: 40px;
+    height: 3px;
+    background: #69D1C5;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.burger-icon::before {
+    transform: translateY(-13px);
+}
+.burger-icon::after {
+    transform: translateY(13px);
+}
+/* ----------Burger-Animation--------- */
+.row-burger.open {
+    overflow: visible;
 }
 
-nav ul li a:hover::after{
-    width: 100%;
+.row-burger.open .burger-icon {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
 }
 
+.row-burger.open .burger-icon::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.row-burger.open .burger-icon::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* ----------Drop Menu----------- */
+
+.drop-menu{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0px;
+    overflow: hidden;
+    background-color: #262626;
+    transition: all .5s ease-in-out;
+}
+.drop-menu.open{
+    margin: 0;
+    height: 280px;
+    overflow: hidden;
+    background-color: #262626;
+    padding: 0.5rem;
+}
+.drop-menu ul{
+    list-style: none;
+    margin: 0;
+}
+.drop-list a{
+    color: #69D1C5;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.drop-list li{
+    text-align: center;
+    padding: 0.35rem;
+}
+.social-links{
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+}
+.social-links i{
+    color: #69D1C5;
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0rem 1rem
+}
+
+
+/* ------------------------ */
 .header-text{
     width: 100%;
     height: 92vh;

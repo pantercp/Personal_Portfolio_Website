@@ -8,6 +8,7 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c0e039a635.js" crossorigin="anonymous"></script>
+    <script></script>
 </head>
 
 <body>
@@ -20,20 +21,31 @@
                 <div class="row-name">
                     <img src="images/logo-name.png" class="logo-name">
                 </div>
-                <div class="row-pages">
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <div class="row-burger">
+                    <div class="burger-icon"></div>
                 </div>
             </nav>
         </div>
     </div>
+    <!-- <div class="container-menu"> -->
+        <div class="drop-menu">
+            <ul class="drop-list">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.facebook.com/CJPixelUK"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/pantercp"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/cjpixel.mockups/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/christianpanter"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    <!-- </div> -->
     <div class="header-text">
         <div class="text-group">
             <p>UI/UX Designer</p>
@@ -203,6 +215,7 @@
         <p>Copyright &#169 Christian. Made with <i class="fa-solid fa-heart"></i> by CJPixel</p>
     </div>
 
+    <script src="app.js"></script>
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links")
