@@ -6,6 +6,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: calc(15px + 0.390625vw);
 }
 :root {
     --primary: #69D1C5;
@@ -124,7 +125,7 @@ nav {
 }
 .drop-list a{
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-decoration: none;
 }
 .drop-list li{
@@ -159,7 +160,8 @@ nav {
     align-items: center;
     margin-top: 10px;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.25em;
+    text-align: center;
 }
 .header{
     padding: 1rem;
@@ -167,6 +169,9 @@ nav {
 .header p{
     color: var(--secondary);
     font-style: italic;
+}
+.intro a{
+    color: var(--primary);
 }
 .text-group span{
     color: var(--primary);
@@ -176,13 +181,13 @@ nav {
     padding: 1rem;
 }
 .intro p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: justify;
 }
 /* <!-- -------------about------------- --> */
 #about{
-    padding: 80px 0;
-    color: var(--secondary);
+    padding: 20px 0;
+    /* color: var(--secondary); */
 }
 .row{
     display: flex;
@@ -195,7 +200,7 @@ nav {
     flex-basis: 35%;
 }
 .about-col-1 img{
-    width: 95%;
+    width: 100%;
     margin: auto;
     border-radius: 15px;
 }
