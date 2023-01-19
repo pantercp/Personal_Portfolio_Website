@@ -205,16 +205,11 @@ nav {
     border-radius: 15px;
 }
 .about-col-2{
+    text-align: justify;
     flex-basis: 60%;
     margin-left: 20px;
+    max-width: 100%;
 }
-
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: fff;
-}
-
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -247,7 +242,7 @@ nav {
 }
 .tab-contents ul li span{
     color: var(--primary);
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 .tab-contents{
     display: none;
@@ -300,6 +295,8 @@ nav {
 }
 h1.sub-title{
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 .work-list{
     display: grid;
@@ -467,9 +464,6 @@ nav ul .fa-solid{
     top: 25px;
     left: 25px;
     cursor: pointer;
-}
-.sub-title{
-    font-size: 40px;
 }
 
 @media only screen and (max-width: 600px){
