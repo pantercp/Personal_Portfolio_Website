@@ -1,8 +1,3 @@
-// const burgerbtn = document.querySelector(".row-burger")
-// burgerbtn.addEventListener("click", () => {
-//     this.classList.add("open")
-// });
-
 const burgerBtn = document.querySelector('.row-burger');
 const dropMenu = document.querySelector('.drop-menu');
 
@@ -18,3 +13,34 @@ burgerBtn.addEventListener('click', () => {
     menuOpen = false;
   }
 });
+
+var tablinks = document.getElementsByClassName("tab-links")
+var tabcontents = document.getElementsByClassName("tab-contents")
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyjroL7leQsxJW_QlU58HnRuaJPQzlc5PAYPis-iaiM6FqrsqumooEhD7n-vhk7x9To/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function () {
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
