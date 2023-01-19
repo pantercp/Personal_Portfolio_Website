@@ -114,7 +114,7 @@ nav {
 }
 .drop-menu.open{
     margin: 0;
-    height: 280px;
+    height: 300px;
     overflow: hidden;
     background-color: var(--third);
     padding: 0.5rem;
@@ -195,20 +195,21 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 }
-
-.about-col-1{
-    flex-basis: 35%;
-}
 .about-col-1 img{
-    width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
     margin: auto;
     border-radius: 15px;
 }
 .about-col-2{
     text-align: justify;
-    flex-basis: 60%;
-    margin-left: 20px;
-    max-width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+}
+.about-col-2 p{
+    font-size: 0.8rem;
 }
 .tab-titles{
     display: flex;
@@ -238,6 +239,7 @@ nav {
 
 .tab-contents ul li{
     list-style: none;
+    font-size: 0.7rem;
     margin: 10px 0;
 }
 .tab-contents ul li span{
@@ -259,6 +261,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
+    color: #fff;
     margin-top: 50px;
 }
 .services-list div{
@@ -270,7 +273,7 @@ nav {
     transition: background 0.5s, transform 0.5s;
 }
 .services-list div i{
-    font-size: 50px;
+    font-size: 3.5rem;
     margin-bottom: 30px;
 }
 .services-list div h2{
@@ -279,15 +282,18 @@ nav {
     margin-bottom: 15px;
 }
 .services-list div a{
-    text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 0.9rem;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover{
     background: var(--primary);
     transform: translateY(-10px);
+    color: var(--main);
+}
+.services-list div:hover a{
+    color: var(--main);
 }
 /* ------------------portfolio------------------- */
 #portfolio{
@@ -374,6 +380,10 @@ h1.sub-title{
 
 .contact-left{
     flex-basis: 30%;
+    min-width: 265px;
+}
+.contact-left .sub-title{
+    text-align: start;
 }
 .contact-right{
     flex-basis: 60%;
@@ -471,10 +481,6 @@ nav ul .fa-solid{
     }
     .header-text{
         background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);
-        font-size: 0.8em;
-    }
-    .about-col-1, .about-col-2{
-        flex-basis: 100%;
     }
     .about-col-1{
         margin-bottom: 30px;
@@ -488,6 +494,9 @@ nav ul .fa-solid{
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+    .contact-left .sub-title{
+        text-align: center;
     }
     .contact-left{
         text-align: center;
