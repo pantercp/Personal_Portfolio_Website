@@ -61,7 +61,7 @@ nav {
 .burger-icon {
     width: 40px;
     height: 3px;
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -71,7 +71,7 @@ nav {
     position: absolute;
     width: 40px;
     height: 3px;
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
