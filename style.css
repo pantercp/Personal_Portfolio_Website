@@ -17,6 +17,17 @@ html{
 body {
     background: var(--main);
     color: #fff;
+    --accent-color: #080808;
+    --background-color: #69D1C5;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+    transition: var(--transition-delay);
+}
+body.dark{
+    --accent-color: #69D1C5;
+    --background-color: #080808;
+    --text-color: white;
 }
 
 
@@ -104,27 +115,37 @@ nav {
 
 .drop-menu{
     margin: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 0px;
     overflow: hidden;
     background-color: var(--third);
     transition: all .5s ease-in-out;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 .drop-menu.open{
     margin: 0;
-    height: 300px;
+    height: 70vh;
     overflow: hidden;
-    background-color: var(--third);
     padding: 0.5rem;
 }
 .drop-menu ul{
     list-style: none;
     margin: 0;
 }
+.drop-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .drop-list a{
-    color: var(--primary);
+    color: var(--accent-color);
     font-size: 1.25rem;
     text-decoration: none;
 }
@@ -133,16 +154,75 @@ nav {
     padding: 0.35rem;
 }
 .social-links{
-    background-color: var(--third);
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 10px;
 }
 .social-links i{
-    color: var(--primary);
+    color: var(--accent-color);
     font-size: 1.5rem;
     padding: 1rem 1rem 0rem 1rem
 }
 
+/* ----------Dark/Light-------- */
+
+.theme-toggle-button{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+}
+.theme-toggle-button .icon{
+    margin-right: .5em;
+}
+.theme-toggle-button:hover,
+.theme-toggle-button:focus{
+    transform: scale(1.1);
+}
+.sun-moon-container{
+    --rotation: 0;
+    position: absolute;
+    top: 0;
+    height: 75vmin;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
+}
+.sun,
+.moon{
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 30px;
+    height: 30px;
+    fill: var(--accent-color);
+}
+.sun{
+    bottom: 5%;
+    opacity: 1;
+}
+.dark .sun{
+    opacity: 0;
+}
+.moon{
+    top: 5%;
+    opacity: 0;
+}
+.dark .moon{
+    opacity: 1;
+}
 
 /* ------------------------ */
 .header-text{
@@ -481,6 +561,9 @@ nav ul .fa-solid{
     }
     .header-text{
         background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);
+    }
+    .sun-moon-container{
+        height: 200vmin;
     }
     .about-col-1{
         margin-bottom: 30px;
