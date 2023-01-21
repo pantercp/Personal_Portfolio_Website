@@ -456,7 +456,8 @@ h1.sub-title{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: var(--text-color-2);
+    background: var(--accent-color);
+    color: var(--background-color);
 }
 
 /* ------------------------contact------------------- */
@@ -497,6 +498,10 @@ h1.sub-title{
 .btn.btn2{
     display: inline-block;
     background: var(--background-color);
+}
+.btn.btn2:hover{
+    background: var(--accent-color);
+    color: var(--background-color);
 }
 .contact-right form{
     width: 100%;
