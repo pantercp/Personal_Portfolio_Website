@@ -399,7 +399,7 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-.container-project img, h2, p, h6{
+.container-project img, h2, h6{
     margin-bottom: 0.5rem;
 }
 .container-project h4{
@@ -407,6 +407,12 @@ nav {
 }
 .container-project h6{
     font-style: italic;
+    align-self: flex-start;
+}
+.git-read{
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
     align-self: flex-start;
 }
 #portfolio img{
@@ -439,6 +445,7 @@ nav {
 .container-project p{
     text-align: justify;
     font-size: 0.8rem;
+    margin-bottom: 0.25rem;
 }
 
 /* ------------------------contact------------------- */
