@@ -17,7 +17,7 @@ burgerBtn.addEventListener('click', () => {
 const sunMoonContainer = document.querySelector(".sun-moon-container")
 
 document.querySelector(".theme-toggle-button").addEventListener("click", () => {
-  document.body.classList.toggle("dark")
+  document.body.classList.toggle("light")
   const currentRotation = parseInt(getComputedStyle(sunMoonContainer).getPropertyValue("--rotation"))
   sunMoonContainer.style.setProperty("--rotation", currentRotation + 180)
 })
@@ -52,3 +52,5 @@ form.addEventListener('submit', e => {
     })
     .catch(error => console.error('Error!', error.message))
 })
+
+

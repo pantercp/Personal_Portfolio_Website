@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
     font-size: calc(15px + 0.390625vw);
 }
-body {
+/* body {
     background: var(--background-color);
     color: var(--text-color);
     --accent-color: #42033c;
@@ -25,7 +25,25 @@ body.dark{
     --text-color: white;
     --text-color-2: #ababab;
     --dark-accent: #262626;
-
+} */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    --accent-color: #69D1C5;
+    --background-color: #080808;
+    --text-color: white;
+    --text-color-2: #ababab;
+    --dark-accent: #262626;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+    transition: var(--transition-delay);
+}
+body.light{
+    --accent-color: #42033c;
+    --background-color: white;
+    --text-color: black;
+    --dark-accent: #ababab;
+    --text-color-2: #ababab;
 }
 
 
@@ -207,17 +225,17 @@ nav {
 }
 .sun{
     bottom: 5%;
-    opacity: 1;
-}
-.dark .sun{
     opacity: 0;
+}
+.light .sun{
+    opacity: 1;
 }
 .moon{
     top: 5%;
-    opacity: 0;
-}
-.dark .moon{
     opacity: 1;
+}
+.light .moon{
+    opacity: 0;
 }
 
 /* ------------------------ */
@@ -383,18 +401,19 @@ nav {
     margin-bottom: 1rem;
     text-align: center;
 }
-
+  
 #portfolio{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 .container-project{
     padding: 1rem;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
     border-radius: 1rem;
     max-width: 350px;
+    /* min-width: 150px; */
     display: flex;
     flex-direction: column;
     align-items: center;
