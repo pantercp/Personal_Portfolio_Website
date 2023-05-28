@@ -608,6 +608,14 @@ h6 {
     background: var(--background-color);
 }
 
+.contact-right .btn.btn2 {
+    display: block;
+    background: var(--background-color);
+    color: var(--accent-color);
+    border: 2px solid;
+    margin: 40px 15px;
+}
+
 .btn.btn2:hover {
     background: var(--accent-color);
     color: var(--background-color);
@@ -637,13 +645,60 @@ form .btn2 {
     cursor: pointer;
 }
 
+/* --------Footer------- */
+
+.footer {
+    background: var(--dark-accent);
+    padding: 1rem 1rem 0 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer a{
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.top-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer .footer-logo{
+    width: auto;
+}
+
+.footer .footer-logo img{
+    max-width: 100px;
+}
+
+.footer ul{
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.footer-socials{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-socials .wrapper{
+    max-width: 320px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: var(--dark-accent);
     font-weight: 300;
     margin-top: 20px;
+    border-top: 1px solid var(--background-color);
 }
 
 .copyright i {
