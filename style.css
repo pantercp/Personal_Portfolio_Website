@@ -673,11 +673,42 @@ form .btn2 {
 
 .footer .footer-logo {
     width: auto;
+    max-width: 400px;
     margin: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer .footer-logo img {
-    max-width: 100px;
+    max-width: 33%;
+    margin: 0 1rem;
+}
+
+.footer .text-wrap{
+    text-align: justify;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.footer .text-wrap::before{
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 26%;
+    background: var(--accent-color);
+    height: 74%;
+    width: 1px;
+}
+
+.footer .text-wrap h4{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer .text-wrap p{
+    font-size: 0.7rem;
 }
 
 .footer .footer-services,
