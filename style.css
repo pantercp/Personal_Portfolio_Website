@@ -654,38 +654,49 @@ form .btn2 {
     font-size: 0.8rem;
 }
 
-.footer a{
+.footer a {
     color: var(--accent-color);
     text-decoration: none;
 }
 
-.top-wrapper{
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.top-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.footer .footer-logo{
+.footer .footer-logo {
     width: auto;
+    margin: 1rem 0.5rem;
 }
 
-.footer .footer-logo img{
+.footer .footer-logo img {
     max-width: 100px;
 }
 
-.footer ul{
+.footer .footer-services,
+.portfolio {
+    margin: 1rem 0.5rem;
+}
+
+.footer ul {
     list-style: none;
     margin-top: 0.5rem;
 }
 
-.footer-socials{
+.footer-socials {
     text-align: center;
     margin: 1rem;
     font-size: 1.3rem;
 }
 
-.footer-socials .wrapper{
+.footer-socials .wrapper {
     max-width: 320px;
     margin-inline: auto;
     display: flex;
