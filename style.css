@@ -87,15 +87,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    width: 30px;
+    margin: 0 1rem;
     height: 40px;
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
 
 .burger-icon {
-    width: 40px;
-    height: 3px;
+    width: 30px;
+    height: 2px;
     background: #fff;
     border-radius: 5px;
     transition: all .5s ease-in-out;
@@ -105,8 +106,7 @@ nav {
 .burger-icon::after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 3px;
+    height: 2px;
     background: #fff;
     border-radius: 5px;
     transition: all .5s ease-in-out;
@@ -114,10 +114,12 @@ nav {
 
 .burger-icon::before {
     transform: translateY(-13px);
+    width: 40px;
 }
 
 .burger-icon::after {
     transform: translateY(13px);
+    width: 40px;
 }
 
 /* ----------Burger-Animation--------- */
@@ -126,17 +128,19 @@ nav {
 }
 
 .row-burger.open .burger-icon {
-    transform: translateX(-50px);
+    transform: translateX(0px);
     background: transparent;
     box-shadow: none;
 }
 
 .row-burger.open .burger-icon::before {
-    transform: rotate(45deg) translate(35px, -35px);
+    transform: rotate(-135deg) translate(0, 0);
+    width: 40px;
 }
 
 .row-burger.open .burger-icon::after {
-    transform: rotate(-45deg) translate(35px, 35px);
+    transform: rotate(135deg) translate(0, 0);
+    width: 40px;
 }
 
 /* ----------Drop Menu----------- */
@@ -358,13 +362,85 @@ h1.sub-title {
 }
 
 .about-col-2 {
-    text-align: justify;
     max-width: 500px;
+    width: 100%;
     padding: 1rem;
 }
 
-.about-col-2 p {
+.bio-wrap h4 {
+    margin-block: 0.5rem;
+}
+
+.bio-wrap .detail-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.3rem;
+    background-color: var(--dark-accent);
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.25rem;
+}
+
+.bio-wrap .toggle-button{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-wrap .toggle-button::before,
+.bio-wrap .toggle-button::after{
+    content: '';
+    position: absolute;
+    background: var(--accent-color);
+    border-radius: 0.5rem;
+    width: 80%;
+    height: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.bio-wrap .toggle-button::before{
+    transform: rotate(90deg);
+}
+
+.bio-wrap .toggle-button::after{
+    transform: rotate(0deg);
+}
+
+.bio-wrap .toggle-button.open::before{
+    transform: rotate(360deg);
+}
+
+.bio-wrap .toggle-button.open::after{
+    transform: rotate(-180deg);
+}
+
+.bio-wrap .bio-detail p {
+    pointer-events: none;
+    opacity: 0;
+    font-size: 0.1rem;
+    padding-left: 1rem;
+    text-align: justify;
+    transition: all 0.3s ease-in;
+}
+
+.bio-wrap .bio-detail.open p {
+    opacity: 1;
+    margin: 0.5rem;
     font-size: 0.8rem;
+    text-align: justify;
+}
+
+.container-about .left-border::before {
+    left: 0;
+    top: 5%;
+    background: var(--accent-color);
+    height: 90%;
+    width: 1px;
 }
 
 .tab-titles {
@@ -470,11 +546,11 @@ h1.sub-title {
 .services-list div:hover {
     background: var(--accent-color);
     transform: translateY(-10px);
-    color: var(--background-color);
+    color: #080808;
 }
 
 .services-list div:hover .left-border::before {
-    background: var(--background-color);
+    background: #fff;
 }
 
 .services-list div:hover a {
@@ -790,8 +866,6 @@ form .btn2 {
     background: white;
 }
 
-
-
 .footer .text-wrap h4 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -835,7 +909,7 @@ form .btn2 {
 }
 
 .copyright i {
-    color: var(--primary);
+    color: var(--accent-color);
 }
 
 

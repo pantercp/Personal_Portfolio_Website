@@ -53,4 +53,11 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
+const toggleBtns = document.querySelectorAll(".toggle-button");
+
+for (let toggleBtn of toggleBtns) toggleBtn.parentElement.addEventListener('click', () => {
+  toggleBtn.classList.toggle("open");
+  toggleBtn.parentElement.parentElement.classList.toggle("open");
+})
+
 
