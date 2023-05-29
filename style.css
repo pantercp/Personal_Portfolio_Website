@@ -42,11 +42,11 @@ body {
 }
 
 body.light {
-    --accent-color: #42033c;
-    --background-color: white;
-    --text-color: black;
-    --dark-accent: #ababab;
-    --text-color-2: #ababab;
+    --text-color: #080808;
+    --text-color-2: #312f2f;
+    --accent-color: #CD533B;
+    --background-color: #ababab;
+    --dark-accent: #312f2f;
 }
 
 
@@ -426,8 +426,9 @@ h1.sub-title {
     margin-top: 50px;
 }
 
-.services-list div {
+.services-list .services-card {
     background: var(--dark-accent);
+    color: #fff;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -439,12 +440,17 @@ h1.sub-title {
     margin: 1rem;
 }
 
+.services-card .head{
+    display: flex;
+    justify-content: space-between;
+}
+
 .services-card p {
     text-align: justify;
 }
 
 .services-list div i {
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
@@ -455,7 +461,7 @@ h1.sub-title {
 }
 
 .services-list div a {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-size: 0.9rem;
     margin-top: 20px;
     display: inline-block;
@@ -467,8 +473,12 @@ h1.sub-title {
     color: var(--background-color);
 }
 
+.services-list div:hover .left-border::before {
+    background: var(--background-color);
+}
+
 .services-list div:hover a {
-    color: var(--background-color);
+    color: #080808;
 }
 
 /* -------Photography------- */
@@ -718,6 +728,7 @@ form .btn2 {
 
 .footer {
     background: var(--dark-accent);
+    color: white;
     padding: 1rem 1rem 0 1rem;
     margin-top: 2rem;
     font-size: 0.8rem;
@@ -758,12 +769,12 @@ form .btn2 {
     padding: 0 1rem;
 }
 
-.footer .left-border {
+.left-border {
     text-align: justify;
     position: relative;
 }
 
-.footer .left-border::before {
+.left-border::before {
     content: '';
     position: absolute;
     display: block;
@@ -805,7 +816,7 @@ form .btn2 {
     margin: 1rem 1rem 0 1rem;
     font-size: 1.3rem;
     padding: 1rem 0;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--background-color);
 }
 
 .footer-socials .wrapper {
