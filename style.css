@@ -755,21 +755,31 @@ form .btn2 {
 }
 
 .footer .text-wrap {
-    text-align: justify;
     padding: 0 1rem;
+}
+
+.footer .left-border {
+    text-align: justify;
     position: relative;
 }
 
-.footer .text-wrap::before {
+.footer .left-border::before {
     content: '';
     position: absolute;
     display: block;
-    left: 0;
-    top: 26%;
+    left: -1rem;
+    top: 5%;
     background: var(--accent-color);
-    height: 74%;
+    height: 90%;
     width: 1px;
 }
+
+.footer-services .left-border::before,
+.portfolio .left-border::before {
+    background: white;
+}
+
+
 
 .footer .text-wrap h4 {
     font-size: 1rem;
@@ -792,8 +802,10 @@ form .btn2 {
 
 .footer-socials {
     text-align: center;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
     font-size: 1.3rem;
+    padding: 1rem 0;
+    border-top: 1px solid black;
 }
 
 .footer-socials .wrapper {
@@ -808,7 +820,6 @@ form .btn2 {
     text-align: center;
     padding: 25px 0;
     font-weight: 300;
-    margin-top: 20px;
     border-top: 1px solid var(--background-color);
 }
 
