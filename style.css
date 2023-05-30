@@ -969,7 +969,6 @@ nav ul .fa-solid {
 }
 
 @media only screen and (max-width: 600px) {
-    #header {}
 
     .header-text {
         background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);

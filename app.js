@@ -60,4 +60,8 @@ for (let toggleBtn of toggleBtns) toggleBtn.parentElement.addEventListener('clic
   toggleBtn.parentElement.parentElement.classList.toggle("open");
 })
 
+const comingSoons = document.querySelectorAll(".coming-soon");
 
+for (let comingSoon of comingSoons) comingSoon.addEventListener("click", () => {
+  alert("Web Services page coming on 10/06/2023, for enquiries please fill out the contact form.")
+});
