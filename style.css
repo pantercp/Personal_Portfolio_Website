@@ -367,6 +367,10 @@ h1.sub-title {
     padding: 1rem;
 }
 
+.about-col-2 h2{
+    font-size: 1.5rem;
+}
+
 .about-col-2 p.summary{
     font-size: 0.8rem;
     text-align: justify;
