@@ -462,6 +462,8 @@ h1.sub-title {
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .tab-links {
