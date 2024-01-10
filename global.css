@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: calc(15px + 0.390625vw);
+}
+
+/* body {
+    background: var(--background-color);
+    color: var(--text-color);
+    --accent-color: #42033c;
+    --background-color: white;
+    --text-color: black;
+    --dark-accent: #ababab;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+    transition: var(--transition-delay);
+}
+body.dark{
+    --accent-color: #69D1C5;
+    --background-color: #080808;
+    --text-color: white;
+    --text-color-2: #ababab;
+    --dark-accent: #262626;
+} */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    --accent-color: #69D1C5;
+    --background-color: #080808;
+    --text-color: white;
+    --text-color-2: #ababab;
+    --dark-accent: #262626;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+    transition: var(--transition-delay);
+}
+
+body.light {
+    --text-color: #080808;
+    --text-color-2: #312f2f;
+    --accent-color: #CD533B;
+    --background-color: #ababab;
+    --dark-accent: #312f2f;
+}
+
+
+/* ------------Header--------- */
+
+.container {
+    padding: 10px 10px;
+    background-color: #080808;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo-name {
+    width: 150px;
+}
+
+/* -------------Burger------------ */
+
+.row-burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    margin: 0 1rem;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.burger-icon {
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.burger-icon::before {
+    transform: translateY(-13px);
+    width: 40px;
+}
+
+.burger-icon::after {
+    transform: translateY(13px);
+    width: 40px;
+}
+
+/* ----------Burger-Animation--------- */
+.row-burger.open {
+    overflow: visible;
+}
+
+.row-burger.open .burger-icon {
+    transform: translateX(0px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.row-burger.open .burger-icon::before {
+    transform: rotate(-135deg) translate(0, 0);
+    width: 40px;
+}
+
+.row-burger.open .burger-icon::after {
+    transform: rotate(135deg) translate(0, 0);
+    width: 40px;
+}
+
+/* ----------Drop Menu----------- */
+
+.drop-menu {
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.drop-menu.open {
+    margin: 0;
+    height: 70vh;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.drop-menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.drop-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-list a {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.drop-list li {
+    text-align: center;
+    padding: 0.35rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.social-links i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0rem 1rem
+}
+
+/* ----------Dark/Light-------- */
+
+.theme-toggle-button {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+}
+
+.theme-toggle-button .icon {
+    margin-right: .5em;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+    transform: scale(1.1);
+}
+
+.sun-moon-container {
+    --rotation: 0;
+    position: absolute;
+    top: 0;
+    height: 75vmin;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
+}
+
+.sun,
+.moon {
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 30px;
+    height: 30px;
+    fill: var(--accent-color);
+}
+
+.sun {
+    bottom: 5%;
+    opacity: 0;
+}
+
+.light .sun {
+    opacity: 1;
+}
+
+.moon {
+    top: 5%;
+    opacity: 1;
+}
+
+.light .moon {
+    opacity: 0;
+}
+
+
+/* --------Titles--------- */
+
+h1.sub-title {
+    font-size: 4rem;
+    font-style: italic;
+    color: #2a2929;
+    margin: 1rem;
+    text-align: center;
+}
+
+.container-contact h1.sub-title {
+    font-size: 2rem;
+    font-style: normal;
+    color: #fff;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+
+
+/* --------Footer------- */
+
+.footer {
+    background: var(--dark-accent);
+    color: white;
+    padding: 1rem 1rem 0 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.top-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer .footer-logo {
+    width: auto;
+    max-width: 400px;
+    margin: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-logo img {
+    max-width: 33%;
+    margin: 0 1rem;
+}
+
+.footer .text-wrap {
+    padding: 0 1rem;
+}
+
+.left-border {
+    text-align: justify;
+    position: relative;
+}
+
+.left-border::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -1rem;
+    top: 5%;
+    background: var(--accent-color);
+    height: 90%;
+    width: 1px;
+}
+
+.footer-services .left-border::before,
+.portfolio .left-border::before {
+    background: white;
+}
+
+.footer .text-wrap h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer .text-wrap p {
+    font-size: 0.7rem;
+}
+
+.footer .footer-services,
+.portfolio {
+    margin: 1rem 0.5rem;
+}
+
+.footer ul {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.footer-socials {
+    text-align: center;
+    margin: 1rem 1rem 0 1rem;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--background-color);
+}
+
+.footer-socials .wrapper {
+    max-width: 320px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 300;
+    border-top: 1px solid var(--background-color);
+}
+
+.copyright i {
+    color: var(--accent-color);
+}
+
+
+
+/* --------------------------css for small screens------------------ */
+nav .fa-solid {
+    display: block;
+    font-size: 25px;
+}
+
+nav ul {
+    background: var(--primary);
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+
+nav ul li {
+    display: block;
+    margin: 25px;
+}
+
+nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+
+    .diagonal {
+        padding-block: 2rem;
+    }
+
+    .photography-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header-text {
+        background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);
+    }
+
+    .sun-moon-container {
+        height: 200vmin;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-left .sub-title {
+        text-align: center;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-right form {
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
