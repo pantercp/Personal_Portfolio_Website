@@ -251,15 +251,22 @@
 .project-tabs ul.head {
     list-style-type: none;
     display: flex;
-    padding: 0.5rem;
-    padding-bottom: 0.25rem;
     justify-content: center;
 }
 
 .project-tabs a{
-    margin: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
     color: unset;
     text-decoration: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #8a8c91;
+    transition: all 0.25s ease-in-out;
+}
+
+.project-tabs a.active{
+    background-color: #323232;
+    color: #fff;
 }
 
 .project-tabs a::after{
@@ -274,7 +281,7 @@
 }
 
 .project-tabs a.active::after{
-    width: 80%;
+    width: 50%;
 }
 
 /* -------Tab Detail------ */
@@ -284,11 +291,13 @@
 }
 
 .project-detail .tab-detail.active{
-    margin-block: 1rem;
+    padding-block: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #323232;
+    border-radius: 5px;
 }
 
 /* ------About Section------ */
@@ -359,11 +368,6 @@
     margin-top: 0.25rem;
 }
 
-
-
-
-
-
 /* ------Hero Section------ */
 
 .project-hero {
@@ -371,10 +375,26 @@
     grid-row: 1 / 4;
 }
 
-
 .project-hero img{
     max-width: 100%;
 }
+
+/* ------Responsive Project Detail------ */
+
+@media only screen and (max-width: 800px) {
+
+    .project-tabs {
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .project-hero {
+        grid-column: 1 / 13;
+        grid-row: 2;
+    }
+
+}
+
 
 
 .two {
