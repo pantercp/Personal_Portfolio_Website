@@ -29,3 +29,32 @@ function activeLink() {
 project.forEach((item) =>
     item.addEventListener('click', activeLink));
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.project-tabs ul.head a');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(event) {
+                event.preventDefault();
+    
+                // Remove "active" class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+    
+                // Add "active" class to the clicked tab
+                tab.classList.add('active');
+    
+                // Extract the "data-value" attribute
+                const dataValue = tab.getAttribute('data-value');
+    
+                // Remove "active" class from all tab-detail elements
+                const tabDetails = document.querySelectorAll('.tab-detail');
+                tabDetails.forEach(detail => detail.classList.remove('active'));
+    
+                // Find the tab-detail element with corresponding ID and add "active" class
+                const targetTabDetail = document.getElementById(dataValue);
+                if (targetTabDetail) {
+                    targetTabDetail.classList.add('active');
+                }
+            });
+        });
+    });
+
