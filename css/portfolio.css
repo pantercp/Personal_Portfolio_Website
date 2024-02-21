@@ -83,10 +83,30 @@
     transition: 0.5s;
 }
 
+.project-container .title-bar .peakicon img {
+    height: 60px;
+    transition: 0.5s;
+    transform: translateY(-8px);
+}
+
+.project-container .title-bar .shamsicon img {
+    height: 50px;
+    transition: 0.5s;
+    transform: translateY(-6px);
+}
+
 /* -------Active Icon----- */
 
 .project-container ul li.active a img {
     transform: translateY(-33px);
+}
+
+.project-container ul li.active .peakicon img {
+    transform: translateY(-42px);
+}
+
+.project-container ul li.active .shamsicon img {
+    transform: translateY(-37px);
 }
 
 .project-container ul li.active a .title {
@@ -140,7 +160,7 @@
 
 .project-container ul li:nth-child(2).active~.indicator {
     transform: translateX(calc(80px * 1));
-    background: #d8d1d1;
+    background: #0c2117;
 }
 
 .project-container ul li:nth-child(3).active~.indicator {
@@ -213,6 +233,24 @@
         transform: translateY(-27px);
     }
 
+    .project-container .title-bar .peakicon img {
+        height: 50px;
+        transition: 0.5s;
+        transform: translateY(-8px);
+    }
+
+    .project-container ul li.active .peakicon img {
+        transform: translateY(-36px);
+    }
+
+    .project-container ul li.active .shamsicon img {
+        transform: translateY(-30px);
+    }
+
+    .project-container .title-bar .shamsicon img {
+        height: 40px;
+    }
+
 }
 
 
@@ -247,15 +285,15 @@
     font-size: 1.2rem;
 }
 
-.project-detail .project-title h3{
+.project-detail .project-title h3 {
     margin-block: 0.5rem;
 }
 
-.project-detail .project-title span{
+.project-detail .project-title span {
     color: #0c606d;
 }
 
-.project-detail .project-title h4{
+.project-detail .project-title h4 {
     font-style: italic;
 }
 
@@ -272,7 +310,7 @@
     justify-content: center;
 }
 
-.project-tabs a{
+.project-tabs a {
     padding: 0.25rem 0.5rem;
     color: unset;
     text-decoration: none;
@@ -282,12 +320,12 @@
     transition: all 0.25s ease-in-out;
 }
 
-.project-tabs a.active{
+.project-tabs a.active {
     background-color: #323232;
     color: #fff;
 }
 
-.project-tabs a::after{
+.project-tabs a::after {
     transition: all 0.25s ease-in-out;
     content: '';
     position: relative;
@@ -298,17 +336,17 @@
     bottom: -5px;
 }
 
-.project-tabs a.active::after{
+.project-tabs a.active::after {
     width: 50%;
 }
 
 /* -------Tab Detail------ */
 
-.project-detail .tab-detail{
+.project-detail .tab-detail {
     display: none;
 }
 
-.project-detail .tab-detail.active{
+.project-detail .tab-detail.active {
     padding-block: 1rem;
     display: flex;
     flex-direction: column;
@@ -355,17 +393,17 @@
 
 /* ------Testimonial Section------ */
 
-.project-detail #testimonial i{
+.project-detail #testimonial i {
     font-size: 2rem;
 }
 
-.project-detail #testimonial p.quote{
+.project-detail #testimonial p.quote {
     text-align: center;
     position: relative;
     padding-block: 1rem;
 }
 
-.project-detail #testimonial p.quote::after{
+.project-detail #testimonial p.quote::after {
     display: block;
     content: '';
     position: absolute;
@@ -376,11 +414,11 @@
     left: 35%;
 }
 
-.project-detail #testimonial p.author{
+.project-detail #testimonial p.author {
     margin-top: 0.75rem;
 }
 
-.project-detail #testimonial p.occupation{
+.project-detail #testimonial p.occupation {
     font-style: italic;
     font-size: 0.9rem;
     margin-top: 0.25rem;
@@ -396,9 +434,25 @@
     justify-content: center;
 }
 
-.project-hero img{
+.project-hero img {
     max-width: 100%;
 }
+
+
+.two {
+    grid-column: 1 / 7;
+    grid-row: 4;
+}
+
+.project-detail .cta {
+    grid-column: 1 / 7;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* ------Responsive Project Detail------ */
 
@@ -419,17 +473,54 @@
         grid-row: 3;
     }
 
+    .project-detail .cta {
+        grid-column: 1 / 13;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
-.two {
-    grid-column: 1 / 7;
-    grid-row: 4;
+/* --------Buttons-------- */
+
+button:hover {
+    cursor: pointer;
 }
 
-.four {
-    grid-column: 1 / 7;
-    grid-row: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button.effect {
+    background: none;
+    border: 2px solid;
+    font: 1rem;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+}
+
+button.effect {
+    background-color: #0c606d;
+    color: #fff;
+    transition: 0.35s;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        border-color: var(--foreground);
+        color: var(--foreground);
+    }
+}
+
+/* Animate from the left */
+
+button.effect.slide:hover,
+button.effect.slide:focus {
+    box-shadow: inset 12em 0 0 0 #0c606d;
+    color: var(--background);
+}
+
+button.effect.light.slide:hover,
+button.effect.light.slide:focus {
+    box-shadow: inset 12em 0 0 0 #0c606d;
+    color: var(--background);
 }
