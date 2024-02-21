@@ -272,9 +272,9 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
-.project-detail div {
-    /* background-color: #54565a; */
-}
+/* .project-detail div {
+    background-color: #54565a;
+} */
 
 /* -------Project Title------ */
 
@@ -436,6 +436,7 @@
 
 .project-hero img {
     max-width: 100%;
+    border-radius: 5px;
 }
 
 
