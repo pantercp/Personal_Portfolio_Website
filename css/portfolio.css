@@ -289,8 +289,10 @@
     margin-block: 0.5rem;
 }
 
-.project-detail .project-title span {
+.project-detail .project-title h5 {
     color: var(--accent-color);
+    font-size: 1rem;
+    margin-top: 0.25rem;
 }
 
 .project-detail .project-title h4 {
@@ -308,6 +310,7 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .project-tabs a {
@@ -393,17 +396,17 @@
 
 /* ------Testimonial Section------ */
 
-.project-detail #testimonial i {
-    font-size: 2rem;
+.project-detail .testimonial i {
+    font-size: 3rem;
 }
 
-.project-detail #testimonial p.quote {
+.project-detail .testimonial p.quote {
     text-align: center;
     position: relative;
     padding-block: 1rem;
 }
 
-.project-detail #testimonial p.quote::after {
+.project-detail .testimonial p.quote::after {
     display: block;
     content: '';
     position: absolute;
@@ -414,11 +417,11 @@
     left: 35%;
 }
 
-.project-detail #testimonial p.author {
+.project-detail .testimonial p.author {
     margin-top: 0.75rem;
 }
 
-.project-detail #testimonial p.occupation {
+.project-detail .testimonial p.occupation {
     font-style: italic;
     font-size: 0.9rem;
     margin-top: 0.25rem;
