@@ -1,59 +1,87 @@
 
-const project = document.querySelectorAll('.project');
+// Removes "active" from project logos and adds "active" to selected logo
+function activeLink() {
+    projects.forEach((item) =>
+        item.classList.remove('active'));
+    this.classList.add('active');
+    // Gets attribute to handle project detail class
+    var projectItem = this.getAttribute("data-attribute");
+    activeProject(projectItem);
+    setupTabs();
+}
 
+// Removes "active" from all projects' details and adds "active" to selected project"
 function activeProject(projectId) {
-    // Find all elements with class "project"
-    var projectItems = document.querySelectorAll('.project');
     // Find all elements with class "project-detail"
     var projectDetails = document.querySelectorAll('.project-detail');
     // Remove the class "active" from all project details
     projectDetails.forEach(function (detail) {
         detail.classList.remove('active');
     });
-    // Add the class "active" to the corresponding project detail
+    // Add the class "active" to the corresponding project's detail
     var activeProjectDetail = document.querySelector('.project-detail.' + projectId);
     if (activeProjectDetail) {
         activeProjectDetail.classList.add('active');
     }
+
 }
 
-function activeLink() {
-    project.forEach((item) =>
-        item.classList.remove('active'));
-    this.classList.add('active');
-
-    var projectItem = this.getAttribute("data-attribute");
-    activeProject(projectItem);
+// Add an event listener for handling clicks
+function setupTabs() {
+    var project = document.querySelector('.project.active');
+    var projectID = project.getAttribute('data-attribute');
+    // Find all tabs within Project Detail that is active
+    var openProject = document.querySelector('.project-detail.' + projectID);
+    var openProjectTabs = openProject.querySelectorAll('.project-tabs ul.head a');
+    openProjectTabs.forEach((item) =>
+        item.addEventListener('click', activateTab));
 }
 
-project.forEach((item) =>
+function activateTab() {
+    var project = document.querySelector('.project.active');
+    var projectID = project.getAttribute('data-attribute');
+    // Find all tabs within Project Detail that is active
+    var openProject = document.querySelector('.project-detail.' + projectID);
+    var openProjectTabs = openProject.querySelectorAll('.project-tabs ul.head a');
+    console.log(`This is tab inner text: ${this.innerText}`);
+    // Select tab detail within the open project
+    var tabDetails = openProject.querySelectorAll('.tab-detail');
+    // Remove active from all tabs within project
+    openProjectTabs.forEach((item) =>
+        item.classList.remove("active"));
+    // Remove active from all tab details within project
+    tabDetails.forEach((item) =>
+        item.classList.remove("active"));
+    // Add class "active" to clicked tab
+    this.classList.add("active");
+    // Get data attribute of selected tab
+    console.log(`This is data-attribute of selected tab: ${this.getAttribute('data-value')}`);
+    var targetValue = this.getAttribute('data-value')
+    // Get attribute value from tabs
+    var targetDetails = openProject.querySelectorAll('[data-detail]');
+    // Find match between corresponding tab link and tab detail
+    targetDetails.forEach((item) => {
+        if ((item.getAttribute('data-detail') == targetValue)) {
+            console.log("FOUND MATCH");
+            item.classList.add("active");
+        }
+    });
+
+}
+
+// Finds all project logo icons
+const projects = document.querySelectorAll('.project');
+
+// Initialises an event listener for Project Logo Icons
+projects.forEach((item) =>
     item.addEventListener('click', activeLink));
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabs = document.querySelectorAll('.project-tabs ul.head a');
-    
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function(event) {
-                event.preventDefault();
-    
-                // Remove "active" class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-    
-                // Add "active" class to the clicked tab
-                tab.classList.add('active');
-    
-                // Extract the "data-value" attribute
-                const dataValue = tab.getAttribute('data-value');
-    
-                // Remove "active" class from all tab-detail elements
-                const tabDetails = document.querySelectorAll('.tab-detail');
-                tabDetails.forEach(detail => detail.classList.remove('active'));
-    
-                // Find the tab-detail element with corresponding ID and add "active" class
-                const targetTabDetail = document.getElementById(dataValue);
-                if (targetTabDetail) {
-                    targetTabDetail.classList.add('active');
-                }
-            });
-        });
-    });
+
+
+
+setupTabs();
+
+
+
+
+

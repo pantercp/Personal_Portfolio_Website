@@ -23,7 +23,7 @@
 
 
 .project-container .title-bar {
-    background-color: #2a2828;
+    background-color: var(--dark-accent);
     border-radius: 10px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -258,7 +258,7 @@
 
 .project-detail {
     display: none;
-    padding: 10px;
+    padding: 5px;
     padding-top: 20px;
 }
 
@@ -290,7 +290,7 @@
 }
 
 .project-detail .project-title span {
-    color: #0c606d;
+    color: var(--accent-color);
 }
 
 .project-detail .project-title h4 {
@@ -331,7 +331,7 @@
     position: relative;
     display: block;
     height: 3px;
-    background-color: #0c606d;
+    background-color: var(--accent-color);
     width: 0%;
     bottom: -5px;
 }
@@ -369,7 +369,7 @@
     content: '';
     position: absolute;
     width: 3px;
-    background-color: #0c606d;
+    background-color: var(--accent-color);
     height: 90%;
     top: 5%;
     left: -15px;
@@ -388,7 +388,7 @@
 .project-detail .tab-detail i {
     font-size: 1rem;
     margin-inline: 0.5rem;
-    color: #0c606d;
+    color: var(--accent-color);
 }
 
 /* ------Testimonial Section------ */
@@ -408,7 +408,7 @@
     content: '';
     position: absolute;
     width: 30%;
-    background-color: #0c606d;
+    background-color: var(--accent-color);
     height: 3px;
     bottom: 0;
     left: 35%;
@@ -500,7 +500,7 @@ button.effect {
 }
 
 button.effect {
-    background-color: #0c606d;
+    background-color: var(--accent-color);
     color: #fff;
     transition: 0.35s;
 

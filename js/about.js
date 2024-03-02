@@ -13,7 +13,6 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab")
 }
 
-
 const toggleBtns = document.querySelectorAll(".toggle-button");
 
 for (let toggleBtn of toggleBtns) toggleBtn.parentElement.addEventListener('click', () => {
