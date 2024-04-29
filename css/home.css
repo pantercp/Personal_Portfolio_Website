@@ -120,34 +120,6 @@
     text-align: justify;
 }
 
-/* --------Titles--------- */
-
-h1.sub-title {
-    font-size: var(--font-size-xl);
-    font-style: italic;
-    color: #2a2929;
-    margin: 1rem;
-    text-align: center;
-}
-
-h2.sub-title {
-    font-size: var(--font-size-xxxl);
-    font-style: italic;
-    color: #2a2929;
-    margin: 1rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.container-contact h1.sub-title {
-    font-size: 2rem;
-    font-style: normal;
-    color: #fff;
-    margin: 1rem 0;
-    text-align: left;
-}
-
-
 /* ---------------services---------------- */
 #services {
     padding: 30px 0;
