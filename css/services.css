@@ -111,17 +111,22 @@ h2 {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    background-color: var(--foreground);
+    background-color: var(--dark-accent);
+    color: var(--accent-color);
 }
 
 .question-wrapper {
-    max-height: 3rem;
+    max-height: 2.6rem;
     margin-top: 0.5rem;
     overflow: hidden;
     /* background-color: var(--navigation); */
     border: 1px solid var(--text-color-2);
     border-radius: 0.25rem;
     transition: max-height 0.5s ease-in-out;
+}
+
+.contain-question i{
+    font-size: 22px;
 }
 
 .question-wrapper p {
