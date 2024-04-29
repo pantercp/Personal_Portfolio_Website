@@ -268,13 +268,11 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    grid-auto-rows: minmax(auto, auto);
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
-
-/* .project-detail div {
-    background-color: #54565a;
-} */
 
 /* -------Project Title------ */
 
@@ -282,21 +280,25 @@
     grid-column: 1 / 7;
     grid-row: 1;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .project-detail .project-title h3 {
-    margin-block: 0.5rem;
+    margin-block: 0.75rem;
+    color: white;
 }
 
 .project-detail .project-title h5 {
     color: var(--accent-color);
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-top: 0.25rem;
+    margin-bottom: 1rem;
 }
 
 .project-detail .project-title h4 {
     font-style: italic;
+    color: #8a8c91;
+    margin-bottom: 0.75rem;
 }
 
 /* -------Project Tabs------ */
@@ -310,7 +312,6 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 .project-tabs a {
@@ -353,10 +354,14 @@
     padding-block: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     background-color: #323232;
     border-radius: 5px;
+    color: white;
+}
+
+.tab-detail.testimonial {
+    align-items: center;
 }
 
 /* ------About Section------ */
@@ -404,6 +409,8 @@
     text-align: center;
     position: relative;
     padding-block: 1rem;
+    padding-bottom: 1.5rem;
+    padding-inline: 0.5rem;
 }
 
 .project-detail .testimonial p.quote::after {
@@ -431,7 +438,7 @@
 
 .project-hero {
     grid-column: 7 / 13;
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,7 +467,11 @@
 
 /* ------Responsive Project Detail------ */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+
+    .project-container {
+        max-width: 800px;
+    }
 
     .project-detail .project-title {
         grid-column: 1 / 13;
@@ -485,6 +496,16 @@
         align-items: center;
     }
 
+    .project-detail .tab-detail.active {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .project-hero img {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
 }
 
 /* --------Buttons-------- */
@@ -498,7 +519,7 @@ button.effect {
     border: 2px solid;
     font: 1rem;
     line-height: 1;
-    margin: 0.5em;
+    margin: 1rem;
     padding: 0.5em 1em;
 }
 

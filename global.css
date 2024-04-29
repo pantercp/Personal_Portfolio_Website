@@ -7,27 +7,19 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: calc(15px + 0.390625vw);
+    /* font-size: calc(15px + 0.390625vw); */
 }
 
-/* body {
-    background: var(--background-color);
-    color: var(--text-color);
-    --accent-color: #42033c;
-    --background-color: white;
-    --text-color: black;
-    --dark-accent: #ababab;
-    --button-text-color: var(--background-color);
-    --transition-delay: 1s;
-    transition: var(--transition-delay);
+:root {
+    --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
-body.dark{
-    --accent-color: #69D1C5;
-    --background-color: #080808;
-    --text-color: white;
-    --text-color-2: #ababab;
-    --dark-accent: #262626;
-} */
+
 body {
     background: var(--background-color);
     color: var(--text-color);
@@ -180,7 +172,7 @@ nav {
 
 .drop-list a {
     color: var(--accent-color);
-    font-size: 1.25rem;
+    font-size: var(--font-size-lg);
     text-decoration: none;
 }
 
@@ -270,6 +262,27 @@ nav {
 }
 
 
+/* --------Button--------- */
+
+button {
+    background: none;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font: inherit;
+    line-height: 0;
+    margin: 0.5em;
+    padding: 1em 2em;
+    transition: 0.25s;
+    font-size: 1rem;
+}
+
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--accent-color);
+    color: var(--background-color);
+    cursor: pointer;
+}
+
 /* --------Titles--------- */
 
 h1.sub-title {
@@ -297,7 +310,11 @@ h1.sub-title {
     color: white;
     padding: 1rem 1rem 0 1rem;
     margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
+}
+
+.footer h4 {
+    font-size: 1rem;
 }
 
 .footer a {
@@ -357,12 +374,12 @@ h1.sub-title {
 }
 
 .footer .text-wrap h4 {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     margin-bottom: 0.5rem;
 }
 
 .footer .text-wrap p {
-    font-size: 0.7rem;
+    font-size: var(--font-size-sm);
 }
 
 .footer .footer-services,
@@ -447,25 +464,16 @@ nav ul .fa-solid {
 
 @media only screen and (max-width: 600px) {
 
-    .header-text {
+    /* .header-text {
         background-image: url(images/compressed/Rainbow\ Landscapes\,\ Peru.jpg);
-    }
+    } */
 
     .sun-moon-container {
         height: 200vmin;
     }
 
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
-
     .about-col-2 {
         font-size: 14px;
-    }
-
-    .tab-links {
-        font-size: 16px;
-        margin-right: 20px;
     }
 
     .contact-left,

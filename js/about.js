@@ -1,6 +1,12 @@
+const toggleBtns = document.querySelectorAll(".toggle-button");
 
-var tablinks = document.getElementsByClassName("tab-links")
-var tabcontents = document.getElementsByClassName("tab-contents")
+for (let toggleBtn of toggleBtns) toggleBtn.parentElement.addEventListener('click', () => {
+  toggleBtn.classList.toggle("open");
+  toggleBtn.parentElement.parentElement.classList.toggle("open");
+})
+
+var tablinks = document.querySelectorAll(".tab-links");
+var tabcontents = document.querySelectorAll(".tab-contents");
 
 function opentab(tabname) {
   for (tablink of tablinks) {
@@ -13,9 +19,3 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab")
 }
 
-const toggleBtns = document.querySelectorAll(".toggle-button");
-
-for (let toggleBtn of toggleBtns) toggleBtn.parentElement.addEventListener('click', () => {
-  toggleBtn.classList.toggle("open");
-  toggleBtn.parentElement.parentElement.classList.toggle("open");
-})
