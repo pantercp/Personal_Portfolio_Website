@@ -2,7 +2,7 @@
 
 .header-wrap {
     width: 100%;
-    height: 60vh;
+    height: 600px;
     color: #fff;
     background-image: url(../images/compressed/background.jpg);
     background-image: url(../images/compressed/space-hero.jpg);
@@ -223,6 +223,7 @@ h2.sub-title {
     padding-block: 2rem;
     position: relative;
     z-index: 99;
+    padding-inline: 0.55rem;
 }
 
 .client-wrap .client-logos {
