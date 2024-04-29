@@ -387,10 +387,14 @@
 
 .project-detail .tab-detail ul {
     list-style-type: none;
+    max-width: 600px;
+    margin: auto;
 }
 
 .project-detail .tab-detail li {
     margin-block: 0.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .project-detail .tab-detail i {
@@ -523,15 +527,14 @@ button.effect {
     padding: 0.5em 1em;
 }
 
-button.effect {
-    background-color: var(--accent-color);
-    color: #fff;
+.project-wrapper button.effect {
+    color: var(--accent-color);
     transition: 0.35s;
-
+    
     &:hover,
     &:focus {
+        background-color: var(--accent-color);
         cursor: pointer;
-        border-color: var(--foreground);
         color: var(--foreground);
     }
 }
@@ -540,8 +543,8 @@ button.effect {
 
 button.effect.slide:hover,
 button.effect.slide:focus {
-    box-shadow: inset 12em 0 0 0 #0c606d;
-    color: var(--background);
+    box-shadow: inset 12em 0 0 0 var(--accent-color);
+    color: #323232;
 }
 
 button.effect.light.slide:hover,
