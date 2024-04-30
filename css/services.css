@@ -344,6 +344,11 @@ h2 {
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     text-align: left;
+    color: white;
+}
+
+.light .hosting-right {
+    background:linear-gradient(138deg, rgb(24 25 25) 0%, rgb(61 59 56) 60%);
 }
 
 .hosting-right h3 {
