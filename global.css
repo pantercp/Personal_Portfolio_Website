@@ -23,6 +23,7 @@ html {
 body {
     background: var(--background-color);
     color: var(--text-color);
+    --clr-gradient: linear-gradient(138deg, rgb(6, 28, 31) 0%, rgb(20, 19, 19) 60%);
     --accent-color: #69D1C5;
     --background-color: #080808;
     --text-color: white;
@@ -39,6 +40,7 @@ body.light {
     --accent-color: #CD533B;
     --background-color: #ababab;
     --dark-accent: #312f2f;
+    --clr-gradient: linear-gradient(138deg, rgb(80, 66, 45) 0%, rgb(42, 41, 41) 60%);
 }
 
 
