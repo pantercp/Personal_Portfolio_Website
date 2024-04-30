@@ -4,7 +4,7 @@
 .maintenance-wrap,
 .social-media-wrap,
 .photography-wrap {
-    padding-block: 2rem;
+    padding-block: 1rem;
 }
 
 h2 {
@@ -15,7 +15,8 @@ h2 {
 
 /* ------Design------ */
 
-.design-wrap .sub-title {
+.design-wrap .sub-title,
+.hosting-wrap .sub-title {
     margin-bottom: 1rem;
 }
 
@@ -267,7 +268,7 @@ h2 {
     }
 
     .design-grid {
-        margin-block: 2rem;
+        margin-block: 0rem;
         max-width: 700px;
         margin-inline: auto;
     }
@@ -280,13 +281,17 @@ h2 {
 
 /* ------Hosting------ */
 
+.hosting-wrap{
+    text-align: center;
+}
+
 .hosting-content {
     padding: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    column-gap: 2rem;
+    gap: 2rem;
 
 }
 
@@ -298,17 +303,59 @@ h2 {
     font-size: var(--font-size-md);
     max-width: 600px;
     text-align: left;
-    list-style-type: square;
+    list-style-type: none;
     margin-block: 1rem;
-    padding-inline-start: 1rem;
+}
+
+.hosting-content .hosting-left li {
+    display: flex;
+    align-items: center;
+    margin-block: 1rem;
+    background: var(--clr-gradient);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: 1px solid #000;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 1px 1px 4px #05292b;
+    color: white;
+}
+
+
+.hosting-content .hosting-left li i{
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    color: var(--accent-color);
+    background-color: #000;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.hosting-right{
+    background: linear-gradient(138deg, rgb(24 25 25) 0%, rgb(8 7 7) 60%);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid #000;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 1px 1px 4px #05292b;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: left;
 }
 
 .hosting-right h3 {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
+    color: var(--accent-color);
+}
+
+.hosting-right a {
+    color: var(--accent-color);
 }
 
 .hosting-right p {
     margin-block: 1rem;
     max-width: 600px;
-    font-size: var(--font-size-md);
+    font-size: 1.25rem;
 }
