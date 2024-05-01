@@ -277,6 +277,14 @@ h2 {
         margin-inline: 0;
     }
 
+    .testimonial .testimonial-container i.fa-quote-right{
+        padding-right: 0;
+    }
+
+    .testimonial .testimonial-container i.fa-quote-left{
+        padding-left: 0;
+    }
+
 }
 
 /* ------Hosting------ */
