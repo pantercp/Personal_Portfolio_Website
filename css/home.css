@@ -261,6 +261,10 @@
     align-items: baseline;
 }
 
+.light .about-grid .text-wrap {
+    color: white;
+}
+
 .about-grid .text-wrap h3 {
     font-size: var(--font-size-xl);
     padding-bottom: 0.75rem;
