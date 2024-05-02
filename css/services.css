@@ -385,3 +385,99 @@ h2 {
     }
 
 }
+
+/* ------Maintenance------- */
+
+.maintenance-wrap{
+    padding: 1rem;
+    text-align: center;
+}
+
+.maintenance-content{
+    display: flex;
+    /* flex-wrap: wrap; */
+    max-width: 1200px;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.maintenance-wrap .text-wrap{
+    max-width: 600px;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    border: 1px solid #000;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 1px 1px 4px #05292b;
+    background: linear-gradient(138deg, rgb(24 25 25) 0%, rgb(8 7 7) 60%);
+}
+
+.light .maintenance-wrap .text-wrap {
+    background:linear-gradient(138deg, rgb(24 25 25) 0%, rgb(61 59 56) 60%);
+}
+
+.maintenance-wrap .text-wrap h3{
+    font-size: var(--font-size-lg);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.maintenance-content .icon-content{
+    display: flex;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.maintenance-content .icon-wrap{
+    text-align: center;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 1px 1px 4px #05292b;
+    border-radius: 1rem;
+    border: 1px solid #000;
+    color: white;
+}
+
+.maintenance-content .icon-wrap p{
+    font-size: var(--font-size-lg);
+    padding: 0.5rem;
+    min-width: 120px;
+    background: var(--clr-gradient);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.maintenance-content .icon-wrap i{
+    font-size: var(--font-size-lg);
+    color: var(--accent-color);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    padding: 1rem;
+    display: block;
+}
+
+.maintenance-wrap button{
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .maintenance-content{
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .maintenance-content .icon-wrap p{
+        min-width: 80px;
+        font-size: 1rem;
+    }
+
+}

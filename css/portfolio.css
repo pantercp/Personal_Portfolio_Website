@@ -351,7 +351,7 @@
 }
 
 .project-detail .tab-detail.active {
-    padding-block: 1rem;
+    padding-block: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,6 +365,10 @@
 }
 
 /* ------About Section------ */
+
+.project-wrapper .project-detail .about-text{
+    padding-top: 1rem;
+}
 
 .project-detail .tab-detail p.about {
     margin-top: 1rem;
